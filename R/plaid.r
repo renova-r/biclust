@@ -225,7 +225,7 @@ options(error = NULL)
 if (transpose) km <- try(kmeans(t(Z), 2, iter.startup), TRUE)
 else km <- try(kmeans(Z, 2, iter.startup), TRUE)
 options(old.options)
-if (class(km) == "try-error") x <- rep(FALSE, dim(Z)[1 + transpose])
+if (inherits(km, "try-error")) x <- rep(FALSE, dim(Z)[1 + transpose])
 ## if kmeans successful, use smaller cluster for starting rows (columns)
 else
 {
@@ -249,7 +249,7 @@ old.options <- options("error")
 options(error = NULL)
 km <- kmeans(average.Z, 2, iter.startup)
 options(old.options)
-if (class(km) == "try-error") x <- rep(FALSE, dim(Z)[1 + transpose])
+if (inherits(km, "try-error")) x <- rep(FALSE, dim(Z)[1 + transpose])
 else
 {
 names(km$cluster) <- dimnames(average.Z)[[1]]

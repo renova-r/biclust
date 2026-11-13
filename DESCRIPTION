@@ -1,5 +1,5 @@
 Package: biclust
-Version: 2.0.3.1
+Version: 2.0.3.1.9001
 Date: 2021-05-22
 Author: Sebastian Kaiser, Rodrigo Santamaria, Tatsiana Khamiakova,
         Martin Sill, Roberto Theron, Luis Quintales, Friedrich
@@ -15,6 +15,7 @@ Description: The main function biclust() provides several algorithms to
         package provides methods for data preprocessing (normalization
         and discretisation), visualisation, and validation of bicluster
         solutions.
+    Compatibility updates by Renova.
 License: GPL-3
 LazyLoad: yes
 NeedsCompilation: yes

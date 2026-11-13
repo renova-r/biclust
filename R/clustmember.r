@@ -1,7 +1,7 @@
 clustmember<-function(res,x,mid=T,cl_label="",which=NA,main="Cluster Membership Graph",xlab="Cluster",color=diverge_hcl(101, h = c(0, 130)),...)
 {
 #require(flexclust)
-if(class(res)!="kcca")
+if(class(res)[1L]!="kcca")
 {
 res<-as.kcca(res,x,...)
 }

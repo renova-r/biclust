@@ -168,7 +168,7 @@ convertclust=function(bicResult)
 {
 	setClass("bicluster", representation(rows="integer", cols="integer"))
 	
-	if(class(bicResult)!="Biclust")
+	if(class(bicResult)[1L]!="Biclust")
 		{
 		stop("The argument 'bicResult' must be of class Biclust")
 		}
